@@ -1,0 +1,26 @@
+Press Alt + F2, type gksudo xed /etc/default/grub press Enter and enter your password.
+
+You will see the following contents:
+GRUB_DEFAULT=0
+GRUB_HIDDEN_TIMEOUT=0
+GRUB_HIDDEN_TIMEOUT_QUIET=true
+GRUB_TIMEOUT=10
+GRUB_DISTRIBUTOR=`lsb_release -i -s 2> /dev/null || echo Debian`
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+GRUB_CMDLINE_LINUX=""
+
+You can change the default from 0 to any number, corresponding to the entry in the Grub bootup menu (first entry is 0, second is 1, etc.)
+
+You can change the "hidden timeout" (no menu); and also display the countdown (GRUB_HIDDEN_TIMEOUT_QUIET=false)
+
+You can force the grub menu to show by commenting out the two GRUB_HIDDEN lines with a # at the beginning of the line
+
+And set the grub menu timeout (default is 10 seconds)
+
+Make your changes, press Ctrl + S to save and Ctrl + Q to exit
+
+Important: Open a terminal with Ctrl + Alt + T and type sudo update-grub to apply the changes you just made
+
+Reboot and you should see your timeout/default entry change
+
+Done.
