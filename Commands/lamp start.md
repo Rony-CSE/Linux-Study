@@ -38,14 +38,27 @@ or,
 
 
 PROBLEM:
-The requested URL /phpmyadmin was not found on this server
+"Not Found
+The requested URL /phpmyadmin/ was not found on this server.
+Apache/2.4.18 (Ubuntu) Server at localhost Port 80"
 
 SOLUTION:
 
 #$ sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
 #$ sudo /etc/init.d/apache2 reload
 
+or,
 
+
+open a termianl and run
+
+#$ gksu gedit /etc/apache2/apache2.conf
+Then add the following line to the end of the file.
+
+#$ Include /etc/phpmyadmin/apache.conf
+Then restart apache
+
+#$ /etc/init.d/apache2 restart
 
 
 

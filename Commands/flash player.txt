@@ -1,0 +1,11 @@
+
+open terminal & type 
+1." apt-cache search adobe flash " press Enter
+2." sudo apt-get install adobe-flashplugin " press Enter
+or
+3." sudo apt-get install flashplugin-installer " press Enter
+4. " sudo apt-get update " press Enter
+
+That's it.
+
+

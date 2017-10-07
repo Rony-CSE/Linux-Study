@@ -1,0 +1,8 @@
+Unable to lock the administration directory (/var/lib/dpkg/) is another process using it?
+[SOLVED]
+
+1. sudo rm /var/lib/apt/lists/lock
+
+2. sudo rm /var/cache/apt/archives/lock
+
+3. sudo rm /var/lib/dpkg/lock
